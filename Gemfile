@@ -38,6 +38,12 @@ gem "paperclip", "~> 5.0.0.beta1"
 
 gem 'rails_12factor'
 
+gem 'carrierwave'
+
+gem "fog-aws"
+
+gem "figaro"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
