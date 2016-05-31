@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
-gem "paperclip", "~> 5.0.0.beta1"
+# gem "paperclip", "~> 5.0.0.beta1"
 
 gem 'rails_12factor'
 
@@ -45,7 +45,7 @@ gem "fog-aws"
 
 gem "figaro"
 
-gem "mini_magick"
+# gem "mini_magick"
 
 gem 'devise'
 
