@@ -16,6 +16,8 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    # Find listing id in url
+    @listing = Listing.find(params[:listing_id])
   end
 
   # GET /orders/1/edit
@@ -26,6 +28,8 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+    # Find listing id in url
+    @listing = Listing.find(params[:listing_id])
     # Buyer Id is equal to current signed in user
     @order.buyer_id = current_user.id
 
