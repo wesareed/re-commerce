@@ -28,10 +28,21 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+
     # Find listing id in url
     @listing = Listing.find(params[:listing_id])
+
+    # Seller of a listing is the same as the user who created it
+    @seller = @listing.user
+
+    # Order id is same as the listing id
+    @order.listing_id = @listing.id
+
     # Buyer Id is equal to current signed in user
     @order.buyer_id = current_user.id
+
+    # Link order and seller id
+    @order.seller_id = @seller.id
 
     respond_to do |format|
       if @order.save
