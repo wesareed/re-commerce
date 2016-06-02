@@ -2,6 +2,15 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  # On sales page, show all orders that belong to current user
+  def sales
+    @orders = Order.all.where(seller: current_user).order("created_at DESC")
+  end
+  # On purchases page, show all purchases that belong to current user
+  def purchases
+    @orders = Order.all.where(buyer: current_user).order("created_at DESC")
+  end
+
   # GET /orders
   # GET /orders.json
   def index
