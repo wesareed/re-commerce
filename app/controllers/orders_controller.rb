@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+    # Buyer Id is equal to current signed in user
     @order.buyer_id = current_user.id
 
     respond_to do |format|
