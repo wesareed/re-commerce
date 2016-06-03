@@ -12,8 +12,7 @@ ReCommerce is an niche e-commerce app built in Ruby on Rails, with a focus on vi
 
 
 
- - Image Uploading using the   
-   [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) gem
+ - Image Uploading using the [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) gem
 
 
 
@@ -22,8 +21,7 @@ ReCommerce is an niche e-commerce app built in Ruby on Rails, with a focus on vi
 
 
 
- - API key protection using   
-   [Figaro](https://github.com/laserlemon/figaro)
+ - API key protection using [Figaro](https://github.com/laserlemon/figaro)
 
 > Specs
 
