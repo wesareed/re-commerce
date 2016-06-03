@@ -18,4 +18,5 @@ handleStripeResponse: (status, response) ->
     if status == 200
       alert(response.id)
     else
-      alert(response.error.message)
+      $('#stripe_error').text(response.error.message).show()
+      $('input[type=submit]').attr('disabled', false)
