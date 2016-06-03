@@ -16,7 +16,6 @@ payment =
 
 handleStripeResponse: (status, response) ->
     if status == 200
-      console.log(status)
       alert(response.id)
     else
       alert(response.error.message)
