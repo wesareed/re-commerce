@@ -11,7 +11,7 @@ payment =
           card_code: $('.card-code').val(),
           exp_month: $('.card-exp-month').val(),
           exp_year: $('.card-exp-year').val()
-          }, payment.handleStripeResponse)
+          }, handleStripeResponse)
         false
 
 handleStripeResponse: (status, response) ->
